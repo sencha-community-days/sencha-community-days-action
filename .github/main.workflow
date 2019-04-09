@@ -4,7 +4,7 @@ workflow "Test on push" {
 }
 
 action "lint" {
-  uses = "stoe/xo-action@v1.0.0"
+  uses = "stoe/xo-action@master"
   args = "install"
 }
 

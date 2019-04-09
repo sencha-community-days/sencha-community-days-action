@@ -12,5 +12,44 @@
   "main": "index.js",
   "scripts": {
     "test": "exit 0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-config-xo-space": "^0.21.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.16"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "parser": "babel-eslint",
+    "extends": [
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "semi": true,
+          "useTabs": false,
+          "bracketSpacing": false
+        }
+      ],
+      "camelcase": [
+        "error",
+        {
+          "properties": "never"
+        }
+      ]
+    }
   }
 }
