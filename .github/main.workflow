@@ -6,6 +6,7 @@ workflow "Test on push" {
 action "lint" {
   uses = "stoe/xo-action@master"
   args = "install"
+  secrets = ["GITHUB_TOKEN"]
 }
 
 action "build" {
