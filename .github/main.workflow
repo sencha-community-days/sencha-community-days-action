@@ -3,7 +3,7 @@ workflow "Test on push" {
   resolves = ["test"]
 }
 
-action "lint" {
+action "xo" {
   uses = "stoe/xo-action@master"
   args = "install"
   secrets = ["GITHUB_TOKEN"]
@@ -11,7 +11,7 @@ action "lint" {
 
 action "build" {
   uses = "actions/npm@master"
-  needs = ["lint"]
+  needs = ["xo"]
   args = "install"
 }
 
